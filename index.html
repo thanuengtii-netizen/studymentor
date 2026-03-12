@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="as">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Mentor | আপোনাৰ শিক্ষাৰ প্ৰকৃত সংগী</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* মূল ৰং আৰু ফণ্ট */
+        :root {
+            --primary-blue: #1a73e8;
+            --primary-green: #2e7d32;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --dark-text: #202124;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+
+        /* নেভিগেচন */
+        header {
+            background: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 30px;
+            color: var(--primary-green);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-green);
+        }
+
+        /* হিৰ’ বেনাৰ */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; }
+
+        /* মেইন কন্টেন্ট কন্টেইনাৰ */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-blue);
+        }
+
+        /* কার্ড ডিজাইন */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-bottom: 4px solid var(--primary-green);
+        }
+
+        .card:hover { transform: translateY(-10px); }
+        .card i { font-size: 40px; color: var(--primary-blue); margin-bottom: 15px; }
+
+        /* বুটাম */
+        .btn {
+            background: var(--primary-green);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* ফৰ্ম */
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #202124;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        /* ম’বাইলৰ বাবে */
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            nav ul { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-user-graduate"></i> Study Mentor
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#papers">Question Papers</a></li>
+                <li><a href="#notes">Study Notes</a></li>
+                <li><a href="#gk">GK & Quiz</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>স্বাগতম Study Mentor-লৈ</h1>
+        <p>অসমীয়া মাধ্যমৰ ছাত্ৰ-ছাত্ৰীৰ বাবে এটা নিৰ্ভৰযোগ্য শৈক্ষিক মঞ্চ। ইয়াত আপুনি পাব সকলো বিষয়ৰ নোটছ আৰু প্ৰশ্নকাকত।</p>
+        <a href="#notes" class="btn">অধ্যয়ন আৰম্ভ কৰক</a>
+    </section>
+
+    <div class="container">
+        
+        <h2 class="section-title">আমাৰ সেৱাসমূহ</h2>
+        <div class="grid">
+            <div class="card" id="papers">
+                <i class="fas fa-file-alt"></i>
+                <h3>প্ৰশ্নকাকত</h3>
+                <p>Class III ৰ পৰা X লৈ পুৰণি প্ৰশ্নকাকতসমূহ ডাউনলোড কৰক।</p>
+                <a href="#" class="btn">চাওক</a>
+            </div>
+            <div class="card" id="notes">
+                <i class="fas fa-book-open"></i>
+                <h3>অধ্যয়ন নোটছ</h3>
+                <p>অধ্যায় ভিত্তিক সহজ আৰু স্পষ্ট টোকা (Notes)।</p>
+                <a href="#" class="btn">পঢ়ক</a>
+            </div>
+            <div class="card" id="gk">
+                <i class="fas fa-lightbulb"></i>
+                <h3>GK & Quiz</h3>
+                <p>সাধাৰণ জ্ঞানৰ অনুশীলন কৰি নিজকে প্ৰস্তুত কৰক।</p>
+                <a href="#" class="btn">খেলক</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-award"></i>
+                <h3>পৰীক্ষাৰ টিপছ</h3>
+                <p>কেনেকৈ পৰীক্ষাত ভাল ফল দেখুৱাব পাৰি তাৰ পৰামৰ্শ।</p>
+                <a href="#" class="btn">শিকক</a>
+            </div>
+        </div>
+
+        <section id="about" style="margin-top: 80px; text-align: center;">
+            <h2 class="section-title">আমাৰ বিষয়ে</h2>
+            <p style="max-width: 800px; margin: 0 auto;">Study Mentor হ’ল এক ডিজিটেল শৈক্ষিক মঞ্চ যাৰ লক্ষ্য হৈছে অসমীয়া মাধ্যমৰ ছাত্ৰ-ছাত্ৰীক সহায় কৰা। আমি বিশ্বাস কৰোঁ যে প্ৰতিটো শিশুৰেই গুণগত মানৰ শিক্ষাৰ অধিকাৰ আছে, আৰু আমি সেই যাত্ৰাটো সহজ কৰিব বিচাৰোঁ।</p>
+        </section>
+
+        <section id="contact" style="margin-top: 80px;">
+            <h2 class="section-title">যোগাযোগ কৰক</h2>
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="আপোনাৰ নাম" required>
+                    <input type="email" placeholder="ইমেইল ঠিকনা" required>
+                    <textarea rows="5" placeholder="আপোনাৰ বাৰ্তা লিখক..." required></textarea>
+                    <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">বাৰ্তা পঠিয়াওক</button>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="logo" style="justify-content: center; color: white; margin-bottom: 10px;">
+            <i class="fas fa-book" style="color: white;"></i> Study Mentor
+        </div>
+        <p>© 2026 Study Mentor | সকলো অধিকাৰ সংৰক্ষিত।</p>
+        <p>Email: contact@studymentor.com</p>
+    </footer>
+
+</body>
+</html>
